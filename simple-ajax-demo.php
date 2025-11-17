@@ -76,7 +76,8 @@ class Simple_Ajax_Demo
                <form id="ajax-demo-form" class="ajax-demo-form">
                     <div class="ajax-demo-field">
                          <label for="newsletter-email">Email Address *</label>
-                         <input type="email" id="newsletter-email" name="newsletter_email" required placeholder="Enter your email address">
+                         <input type="email" id="newsletter-email" name="newsletter_email" required
+                              placeholder="Enter your email address">
                     </div>
 
                     <div class="ajax-demo-field">
@@ -92,7 +93,7 @@ class Simple_Ajax_Demo
           wp_enqueue_style('ajax-demo-style', plugin_dir_url(__FILE__) . 'style.css', [], '1.0.0');
           wp_enqueue_script('ajax-demo-script', plugin_dir_url(__FILE__) . 'script.js', ['jquery'], '1.0.0');
 
-          wp_localize_script('ajax-demo-script', 'ajax_demo',  array(
+          wp_localize_script('ajax-demo-script', 'ajax_demo', array(
                'ajax_url' => admin_url('admin-ajax.php'),
                'nonce' => wp_create_nonce('newsletter_nonce')
           ));
